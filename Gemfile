@@ -2,7 +2,8 @@ source 'https://rubygems.org'
  
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '4.2.5'
- gem 'bootstrap-sass'
+ gem 'bootstrap-sass'  #is this redundant?
+ gem 'active_model_serializers', '~> 0.10.0'  #put in production environment as well?
  
  group :production do
    gem 'pg'
