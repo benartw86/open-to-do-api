@@ -1,6 +1,11 @@
 class Api::ItemsController < ApiController
   before_action :authenticated?
   
+  def index
+    items = Item.all
+    render json: lists, each_serializer: ListSerializer
+  end
+  
   def create
     item = Item.new(item_params)
     if item.save

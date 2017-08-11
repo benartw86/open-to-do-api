@@ -2,6 +2,8 @@ class Api::ListsController < ApiController
   before_action :authenticated?
   
   def index
+    lists = List.all
+    render json: lists, each_serializer: ListSerializer
   end
   
   def create 
@@ -16,6 +18,6 @@ class Api::ListsController < ApiController
   private
   
   def list_params
-    params.require(:item).permit(:title, :private)
+    params.require(:list).permit(:title, :private)  #how do we include private attribute in command line?
   end
 end
