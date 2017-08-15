@@ -4,6 +4,7 @@ source 'https://rubygems.org'
  gem 'rails', '4.2.5'
  gem 'bootstrap-sass'  #is this redundant?
  gem 'active_model_serializers', '~> 0.10.0'  #put in production environment as well?
+ gem 'bcrypt'
  
  group :production do
    gem 'pg'
